@@ -14,7 +14,7 @@
 	<repositories>
 		<repository>
 			<id>aws-nexus-release</id>
-			<url>https://nexus.qa.vuitonline.com/repository/online-release-group/</url>
+			<url>https://nexus.qa.vuitonline.com/repository/maven-public/</url>
 			<releases>
 				<enabled>true</enabled>
 			</releases>
@@ -26,7 +26,7 @@
 	<pluginRepositories>
 		<pluginRepository>
 			<id>aws-nexus-release</id>
-			<url>https://nexus.qa.vuitonline.com/repository/online-release-group/</url>
+			<url>https://nexus.qa.vuitonline.com/repository/maven-public/</url>
 			<snapshots>
 				<enabled>false</enabled>
 			</snapshots>

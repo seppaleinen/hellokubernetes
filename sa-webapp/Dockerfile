@@ -2,7 +2,7 @@ FROM maven:3.5-alpine
 COPY src/ pom.xml /
 RUN mvn clean install
 
-FROM openjdk:8-jdk-alpine
+FROM openjdk:8-jre-alpine
 # Environment Variable that defines the endpoint of sentiment-analysis python api.
 ENV SA_LOGIC_API_URL http://localhost:5000
 WORKDIR /

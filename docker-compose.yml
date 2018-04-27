@@ -12,6 +12,7 @@ services:
 
   sa-logic:
     restart: always
+    build: sa-logic
     image: seppaleinen/sa-logic
     expose:
       - "5000"
@@ -20,6 +21,7 @@ services:
 
   sa-webapp:
     restart: always
+    build: sa-webapp
     image: seppaleinen/sa-webapp
     ports:
       - "8080:8080"
