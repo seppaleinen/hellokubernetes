@@ -14,8 +14,11 @@ services:
 
   sa-logic:
     restart: always
-#    build: sa-logic
+    build: sa-logic
     image: rinormaloku/sentiment-analysis
+    environment:
+      - http_proxy=proxy01.ica.se:8080
+      - https_proxy=proxy01.ica.se:8080
     expose:
       - "5000"
     networks:
