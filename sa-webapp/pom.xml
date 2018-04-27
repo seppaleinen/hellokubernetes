@@ -11,27 +11,27 @@
 	<name>sentiment-analysis-web</name>
 	<description>Web Application that just forwards the call to sentiment-analysis python api</description>
 
-	<!--<repositories>-->
-		<!--<repository>-->
-			<!--<id>aws-nexus-release</id>-->
-			<!--<url>https://nexus.qa.vuitonline.com/repository/maven-public/</url>-->
-			<!--<releases>-->
-				<!--<enabled>true</enabled>-->
-			<!--</releases>-->
-			<!--<snapshots>-->
-				<!--<enabled>false</enabled>-->
-			<!--</snapshots>-->
-		<!--</repository>-->
-	<!--</repositories>-->
-	<!--<pluginRepositories>-->
-		<!--<pluginRepository>-->
-			<!--<id>aws-nexus-release</id>-->
-			<!--<url>https://nexus.qa.vuitonline.com/repository/maven-public/</url>-->
-			<!--<snapshots>-->
-				<!--<enabled>false</enabled>-->
-			<!--</snapshots>-->
-		<!--</pluginRepository>-->
-	<!--</pluginRepositories>-->
+	<repositories>
+		<repository>
+			<id>aws-nexus-release</id>
+			<url>https://nexus.qa.vuitonline.com/repository/maven-public/</url>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</repository>
+	</repositories>
+	<pluginRepositories>
+		<pluginRepository>
+			<id>aws-nexus-release</id>
+			<url>https://nexus.qa.vuitonline.com/repository/maven-public/</url>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</pluginRepository>
+	</pluginRepositories>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>

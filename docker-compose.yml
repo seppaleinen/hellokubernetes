@@ -26,7 +26,7 @@ services:
 
   sa-webapp:
     restart: always
-#    build: sa-webapp
+    build: sa-webapp
     image: rinormaloku/sentiment-analysis-web-app
     ports:
       - "8080:8080"
