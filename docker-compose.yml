@@ -1,0 +1,30 @@
+version: "3"
+
+services:
+  sa-frontend:
+    restart: always
+    build: sa-frontend
+    image: seppaleinen/sa-frontend
+    ports:
+      - "80:80"
+    networks:
+      - frontend
+
+  sa-logic:
+    restart: always
+    image: seppaleinen/sa-logic
+    expose:
+      - "5000"
+    networks:
+      - frontend
+
+  sa-webapp:
+    restart: always
+    image: seppaleinen/sa-webapp
+    ports:
+      - "8080:8080"
+    networks:
+      - frontend
+
+networks:
+  frontend:
