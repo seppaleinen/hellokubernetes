@@ -5,6 +5,10 @@ import TextField from 'material-ui/TextField';
 import RaisedButton from 'material-ui/RaisedButton';
 import Paper from 'material-ui/Paper';
 import Polarity from "./components/Polarity";
+//import url;
+
+const homeUrl = process.env['WEBAPP_URL'] || 'http://localhost:8080' ;
+const webappUrl = homeUrl + '/sentiment';
 
 const style = {
     marginLeft: 12,
@@ -20,7 +24,7 @@ class App extends Component {
     };
 
     analyzeSentence() {
-        fetch('http://localhost:8080/sentiment', {
+        fetch(webappUrl, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

@@ -4,7 +4,9 @@ services:
   sa-frontend:
     restart: always
     build: sa-frontend
-    image: seppaleinen/sa-frontend
+    image: rinormaloku/sentiment-analysis-frontend
+    environment:
+      - WEBAPP_URL=http://192.168.99.100:8080
     ports:
       - "80:80"
     networks:
@@ -12,8 +14,8 @@ services:
 
   sa-logic:
     restart: always
-    build: sa-logic
-    image: seppaleinen/sa-logic
+#    build: sa-logic
+    image: rinormaloku/sentiment-analysis
     expose:
       - "5000"
     networks:
@@ -21,8 +23,8 @@ services:
 
   sa-webapp:
     restart: always
-    build: sa-webapp
-    image: seppaleinen/sa-webapp
+#    build: sa-webapp
+    image: rinormaloku/sentiment-analysis-web-app
     ports:
       - "8080:8080"
     networks:
