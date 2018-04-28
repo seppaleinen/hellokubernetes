@@ -16,6 +16,8 @@ services:
     restart: always
     build: sa-logic
     image: seppaleinen/sentiment-analysis
+    environment:
+      - FLASK_ENV=development
     ports:
       - "5000:5000"
     networks:
