@@ -4,5 +4,4 @@ WORKDIR /app
 RUN pip install -r requirements.txt
 RUN python -m textblob.download_corpora
 EXPOSE 5000
-ENTRYPOINT ["python"]
-CMD ["sentiment_analysis.py"]
+ENTRYPOINT ["python","sentiment_analysis.py"]
