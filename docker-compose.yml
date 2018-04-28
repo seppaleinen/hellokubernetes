@@ -6,7 +6,7 @@ services:
     build: sa-frontend
     image: seppaleinen/sentiment-analysis-frontend
     environment:
-      - WEBAPP_URL=http://192.168.99.100:8080
+      - WEBAPP_URL=http://localhost:8080
     ports:
       - "80:80"
     networks:
@@ -16,11 +16,8 @@ services:
     restart: always
     build: sa-logic
     image: seppaleinen/sentiment-analysis
-    environment:
-      - http_proxy=proxy01.ica.se:8080
-      - https_proxy=proxy01.ica.se:8080
-    expose:
-      - "5000"
+    ports:
+      - "5000:5000"
     networks:
       - frontend
 
@@ -28,6 +25,8 @@ services:
     restart: always
     build: sa-webapp
     image: seppaleinen/sentiment-analysis-web-app
+    environment:
+      - SA_LOGIC_API_URL=http://localhost:5000
     ports:
       - "8080:8080"
     networks:

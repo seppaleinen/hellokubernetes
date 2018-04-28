@@ -1,7 +1,7 @@
 FROM maven:3.5-alpine
 COPY src/ /src/
-COPY pom.xml settings.xml /
-RUN mvn -s settings.xml clean install
+COPY pom.xml /
+RUN mvn clean install
 
 FROM openjdk:8-jre-alpine
 # Environment Variable that defines the endpoint of sentiment-analysis python api.

@@ -3,12 +3,12 @@ package com.sa.web.dto;
 public class SentimentDto {
 
     private String sentence;
-    private float polarity;
+    private Double polarity;
 
     public SentimentDto() {
     }
 
-    public SentimentDto(String sentence, float polarity) {
+    public SentimentDto(String sentence, Double polarity) {
         this.sentence = sentence;
         this.polarity = polarity;
     }
@@ -22,11 +22,11 @@ public class SentimentDto {
         this.sentence = sentence;
     }
 
-    public float getPolarity() {
+    public Double getPolarity() {
         return polarity;
     }
 
-    public void setPolarity(float polarity) {
+    public void setPolarity(Double polarity) {
         this.polarity = polarity;
     }
 
