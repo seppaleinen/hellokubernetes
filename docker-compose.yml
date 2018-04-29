@@ -30,8 +30,10 @@ services:
     build: sa-webapp
     image: seppaleinen/sentiment-analysis-web-app
     environment:
-      - SA_LOGIC_API_URL=http://localhost:5000
+      - SA_LOGIC_API_URL=http://sa-logic:5000
     depends_on:
+      - sa-logic
+    links:
       - sa-logic
     ports:
       - "8080:8080"
