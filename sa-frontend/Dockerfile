@@ -1,7 +1,7 @@
 FROM node:9-alpine
 WORKDIR /data
 COPY package.json /data/
-COPY public src /data/public/
+COPY public /data/public/
 COPY src /data/src/
 RUN npm install
 RUN npm run build
