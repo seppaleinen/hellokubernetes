@@ -6,7 +6,7 @@ services:
     build: sa-frontend
     image: seppaleinen/sentiment-analysis-frontend
     environment:
-      - WEBAPP_URL=http://localhost:8080
+      - WEBAPP_URL=http://192.168.99.100:8080
     depends_on:
       - sa-webapp
     ports:
