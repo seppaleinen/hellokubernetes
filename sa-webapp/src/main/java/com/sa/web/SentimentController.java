@@ -24,8 +24,8 @@ public class SentimentController {
                 .getBody();
     }
 
-    @GetMapping("/testHealth")
-    public ResponseEntity<String> testHealth() {
+    @GetMapping("/health")
+    public ResponseEntity<String> health() {
         return ResponseEntity.ok("{\"status\":\"UP\"}");
     }
 }
