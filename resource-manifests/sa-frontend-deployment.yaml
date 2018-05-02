@@ -16,8 +16,11 @@ spec:
         app: sa-frontend                                  # 6
     spec:
       containers:
-        - image: rinormaloku/sentiment-analysis-frontend
+        - image: seppaleinen/sentiment-analysis-frontend
           imagePullPolicy: Always                         # 7
           name: sa-frontend
+          env:
+            - name: WEBAPP_URL
+              value: "http://sa-web-app"
           ports:
             - containerPort: 80

@@ -6,4 +6,9 @@ This is just to try out kubernetes, following [this guide](https://medium.freeco
 ```bash
 # To start services in docker
 docker-compose --build up -d
+
+kubectl apply -f resource-manifests/service-*
+kubectl apply -f resource-manifests/sa-*
+
+minikube service sa-frontend-lb
 ```
