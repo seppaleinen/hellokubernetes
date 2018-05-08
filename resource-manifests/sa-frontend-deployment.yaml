@@ -20,7 +20,7 @@ spec:
           imagePullPolicy: Always
           name: sa-frontend
           env:
-            - name: WEBAPP_URL
+            - name: REACT_APP_WEBAPP_URL
               value: "http://sa-web-app"
           ports:
             - containerPort: 80

@@ -7,8 +7,9 @@ import Paper from 'material-ui/Paper';
 import Polarity from "./components/Polarity";
 //import url;
 
-const homeUrl = process.env['WEBAPP_URL'] || 'http://localhost:8080' ;
+const homeUrl = process.env.REACT_APP_WEBAPP_URL || 'http://localhost:8080' ;
 const webappUrl = homeUrl + '/sentiment';
+console.log("URL: " + homeUrl);
 
 const style = {
     marginLeft: 12,

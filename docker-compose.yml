@@ -6,7 +6,7 @@ services:
     build: sa-frontend
     image: seppaleinen/sentiment-analysis-frontend
     environment:
-      - WEBAPP_URL=http://sa-webapp:8080
+      - REACT_APP_WEBAPP_URL=http://sa-webapp:8080
     links:
       - sa-webapp
     depends_on:
